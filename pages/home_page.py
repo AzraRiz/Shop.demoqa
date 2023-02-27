@@ -40,6 +40,11 @@ class TestRegister:
         password_field.click()
         password_field.clear()
         password_field.send_keys(password)
+# Click on view icon to view password
+        view_button_register = self.driver.find_element(By.XPATH, "//*[@id='customer_login']/div[2]/form/p[3]/span/span")
+        view_button_register.click()
+        time.sleep(2)
+# Click on register button
         self.driver.execute_script("window.scrollTo(0, 500);")
         register_button = self.driver.find_element(By.XPATH, "//*[@id='customer_login']/div[2]/form/p[4]/button")
         register_button.click() 
@@ -73,6 +78,11 @@ class TestLogin:
         password_logfield.click()
         password_logfield.clear()
         password_logfield.send_keys(password)
+# Click on view icon to view password
+        view_button_login = self.driver.find_element(By.XPATH, "//*[@id='customer_login']/div[1]/form/p[2]/span/span")
+        view_button_login.click()
+        time.sleep(2)
+# Click on checkbox Remember me
         checkbox = self.driver.find_element(By.ID,"rememberme")
         checkbox.click()
         login_button = self.driver.find_element(By.XPATH, "//*[@id='customer_login']/div[1]/form/p[3]/button")
