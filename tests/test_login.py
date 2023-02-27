@@ -14,6 +14,6 @@ def test_login(driver):
     home_page = TestLogin (driver)
     home_page.test_go_to("https://shop.demoqa.com/")
     home_page.test_dismiss()
-    home_page.test_login("Mirjana", "password997!pass") 
+    home_page.test_login("Mirjana", "password987?pass") 
     time.sleep(2)
     
